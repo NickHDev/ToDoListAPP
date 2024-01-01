@@ -1,0 +1,10 @@
+^E:\CSCRIPTS\TODOLIST\SRC\APP\CMAKEFILES\4ED5A30B0B32055E2A34B2E9573CD3AB\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/CScripts/toDoList/src/app -BE:/CScripts/toDoList/src/app --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/CScripts/toDoList/src/app/toDoList.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
